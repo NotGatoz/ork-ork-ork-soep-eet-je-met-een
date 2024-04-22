@@ -17,5 +17,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: phpstan test
-        uses: vendor/bin/phpstan analyse
+        run: vendor/bin/phpstan analyse
       - run: echo "🍏 This job's status is ${{ job.status }}."
