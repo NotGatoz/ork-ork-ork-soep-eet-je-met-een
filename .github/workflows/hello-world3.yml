@@ -21,6 +21,8 @@ jobs:
         run: |
           composer install
           ls ${{ github.workspace }}
+          npx playwright install
+          npx playwright install-deps
       - name: playright test
         run: npx playwright test
       - run: echo "🍏 This job's status is ${{ job.status }}."
